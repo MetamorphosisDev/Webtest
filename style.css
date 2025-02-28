@@ -205,16 +205,16 @@ header {
   display: flex;
   gap: 30px;
   justify-content: center;
-  margin-top: 15px;
-  background-color: rgb(249, 246, 246);
-  border-radius: 20px;
+  margin-top: 20px;
+  background-color: rgb(238, 230, 230);
+  border-radius: 28px;
   padding: 10px 15px;
   box-shadow: 0 3.5px 8px rgba(0, 0, 0, 0.1);
 }
 
 .social-links a {
-  background-color: #5b5959;
-  color: white;
+  background-color: #faf8f8;
+  color: rgb(45, 43, 43);
   width: 35px;
   height: 35px;
   display: flex;
@@ -222,8 +222,7 @@ header {
   align-items: center;
   border-radius: 100%;
   text-decoration: none;
-  transition: 0.3s;
-  opacity: 0.7;
+  transition: 0.5s;
 }
 
 .social-group {
@@ -239,6 +238,7 @@ header {
 .social-links a:hover {
   transform: scale(1.18);
   opacity: 1;
+  color: white;
 }
 
 /* Social links background */
@@ -257,6 +257,11 @@ header {
   box-shadow: 0 4px 12px rgba(220, 8, 8, 0.5);
 }
 /*----------------------------------*/
+
+.social-ig:hover ~ .social-links,
+.social-ig:hover .social-links {
+  background: linear-gradient(45deg, #fd5949, #d6249f, #285aeb);
+}
 
 .glow {
   color: #54f2cb;
