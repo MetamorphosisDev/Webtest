@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #595e6b;
+  overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+#technical-skills {
+  margin-bottom: 10px;
+}
+
+#technical-skills2 {
+  margin-top: -100px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  animation: slideUp 1s ease-out;
+}
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative;
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(19, 20, 19, 0.039);
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.typewriter {
+  font-size: 50px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #9a9a9a;
+  animation: typewriter 3s steps(30) 1s 1 normal both;
+  text-align: center;
+  font-style: normal;
+  transform: rotate(0deg) !important;
+}
+
+@media (max-width: 768px) {
+  .profile-img {
+    animation: float 4s ease-in-out infinite;
+    margin: 1rem auto;
+  }
+
+  .header-content {
+    transform: none !important;
+  }
+}
+
+.section {
+  padding: 5rem 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.kolommusic {
+  color: transparent;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+  padding: 8px;
+  text-align: center;
+}
+
+#music {
+  padding: 1.8rem 0;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 3.5px 20px rgba(35, 34, 34, 0.1);
+}
+
+#music h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#music iframe {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section h2 {
+  color: #050506;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background: #64ffda;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.social-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 15px;
+  background-color: rgb(249, 246, 246);
+  border-radius: 20px;
+  padding: 10px 15px;
+  box-shadow: 0 3.5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-links a {
+  background-color: #5b5959;
+  color: white;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  text-decoration: none;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+
+.social-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links {
+  font-size: 20px;
+}
+
+.social-links a:hover {
+  transform: scale(1.18);
+  opacity: 1;
+}
+
+/* Social links background */
+.social-github a:hover {
+  background-color: #181717;
+  box-shadow: 0 4px 12px rgba(60, 60, 60, 0.5);
+}
+
+.social-ig a:hover {
+  background: linear-gradient(45deg, #fd5949, #d6249f, #285aeb);
+  box-shadow: 0 4px 12px rgba(155, 78, 157, 0.5);
+}
+
+.social-ngl a:hover {
+  background: linear-gradient(45deg, #fd7600, #e10707);
+  box-shadow: 0 4px 12px rgba(220, 8, 8, 0.5);
+}
+/*----------------------------------*/
+
+.glow {
+  color: #54f2cb;
+}
+
+.klik-teks {
+  text-align: center;
+  font-size: 14px;
+  color: transparent;
+  margin-top: 15px;
+  transition: color 0.5s;
+  font-weight: bold;
+  text-shadow: 0px 0px 1.8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-notice {
+  position: fixed;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 100;
+  opacity: 0;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+.scroll-notice.show {
+  top: 10px;
+  opacity: 1;
+}
+
+.footer {
+  text-align: center;
+  padding: 22px 18px;
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-line {
+  width: 80%;
+  margin: 0 auto 13px;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.skill-bar_html {
+  background-color: #fe6550;
+  height: 8px;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.skill-bar_css {
+  background-color: #44c9e0;
+  height: 8px;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.skill-bar_python {
+  background-color: #fafa10;
+  height: 8px;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.skill-bar_adobeillustrator {
+  background-color: #ff5500;
+  height: 8px;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.skill-bar_adobelightroom {
+  background-color: #162ca8;
+  height: 8px;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.skill-bar_adobephotoshop {
+  background-color: #041780;
+  height: 8px;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.skill-bar_canva {
+  background-color: #05bff2;
+  height: 8px;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.skill-percentage {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  background-color: #666464;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 11px;
+  transform: translateX(22px);
+}
+
+.skill-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
+.skill-bar-container {
+  background-color: rgb(252, 249, 249);
+  border-radius: 10px;
+}
+
+.Gmail {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.gmail-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background: linear-gradient(45deg, #fd7600, #e10707, #e2ff03);
+  padding: 6px 15px;
+  border-radius: 30px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.gmail-link {
+  color: rgb(241, 238, 238);
+}
+
+.gmail-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.gmail-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #fd7600, #e10707, #e2ff03);
+}
