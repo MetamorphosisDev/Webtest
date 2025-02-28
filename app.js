@@ -93,6 +93,6 @@ nglLink.addEventListener('mouseout', () => {
 
     setTimeout(() => {
       window.location.href = targetURL;
-    }, 1100);
+    }, 1050);
   });
 });
