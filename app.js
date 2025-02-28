@@ -49,7 +49,6 @@ setInterval(() => {
 
 //Color background social links active//
 
-// Color background social links active
 const socialLinks = document.querySelector('.social-links');
 const igLink = document.querySelector('.social-ig a');
 const githubLink = document.querySelector('.social-github a');
@@ -80,4 +79,20 @@ nglLink.addEventListener('mouseover', () => {
 nglLink.addEventListener('mouseout', () => {
   socialLinks.style.transition = 'background 0.5s ease';
   socialLinks.style.background = 'rgb(238, 230, 230)';
+});
+
+//delaylink//
+[igLink, githubLink, nglLink].forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault(); 
+
+    const targetURL = link.getAttribute('href');
+
+    link.style.transform = 'scale(1.3)';
+    link.style.transition = 'transform 0.3s ease';
+
+    setTimeout(() => {
+      window.location.href = targetURL;
+    }, 1000);
+  });
 });
