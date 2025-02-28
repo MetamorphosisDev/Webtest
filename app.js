@@ -48,38 +48,36 @@ setInterval(() => {
 }, 4500);
 
 //Color background social links active//
-const socialLinks = document.querySelector(".social-links");
-const igLink = document.querySelector(".social-ig a");
-const githubLink = document.querySelector(".social-github a");
-const nglLink = document.querySelector(".social-ngl a");
 
-igLink.addEventListener("mouseover", () => {
-  socialLinks.style.transition = "background 0.5s ease";
-  socialLinks.style.background =
-    "linear-gradient(45deg, #fd5949, #d6249f, #285aeb)";
+// Color background social links active
+const socialLinks = document.querySelector('.social-links');
+const igLink = document.querySelector('.social-ig a');
+const githubLink = document.querySelector('.social-github a');
+const nglLink = document.querySelector('.social-ngl a');
+
+igLink.addEventListener('mouseover', () => {
+  socialLinks.style.transition = 'background 0.5s ease';
+  socialLinks.style.background = 'linear-gradient(45deg, #fd5949, #d6249f, #285aeb)';
+});
+igLink.addEventListener('mouseout', () => {
+  socialLinks.style.transition = 'background 0.5s ease';
+  socialLinks.style.background = 'rgb(238, 230, 230)';
 });
 
-igLink.addEventListener("mouseout", () => {
-  socialLinks.style.transition = "background 0.5s ease";
-  socialLinks.style.background = "rgb(238, 230, 230)";
+githubLink.addEventListener('mouseover', () => {
+  socialLinks.style.transition = 'background 0.5s ease';
+  socialLinks.style.background = '#181717';
+});
+githubLink.addEventListener('mouseout', () => {
+  socialLinks.style.transition = 'background 0.5s ease';
+  socialLinks.style.background = 'rgb(238, 230, 230)';
 });
 
-githubLink.addEventListener("mouseover", () => {
-  socialLinks.style.transition = "background 0.5s ease";
-  socialLinks.style.background = "#181717";
+nglLink.addEventListener('mouseover', () => {
+  socialLinks.style.transition = 'background 0.5s ease';
+  socialLinks.style.background = 'linear-gradient(45deg, #fd7600, #e10707)';
 });
-
-githubLink.addEventListener("mouseout", () => {
-  socialLinks.style.transition = "background 0.5s ease";
-  socialLinks.style.background = "rgb(238, 230, 230)";
-});
-
-nglLink.addEventListener("mouseover", () => {
-  socialLinks.style.transition = "background 0.5s ease";
-  socialLinks.style.background = "linear-gradient(45deg, #fd7600, #e10707)";
-});
-
-nglLink.addEventListener("mouseout", () => {
-  socialLinks.style.transition = "background 0.5s ease";
-  socialLinks.style.background = "rgb(238, 230, 230)";
+nglLink.addEventListener('mouseout', () => {
+  socialLinks.style.transition = 'background 0.5s ease';
+  socialLinks.style.background = 'rgb(238, 230, 230)';
 });
