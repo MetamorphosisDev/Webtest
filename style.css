@@ -91,6 +91,12 @@ header {
   position: relative;
   animation: float 4s ease-in-out infinite;
   box-shadow: 0 0 30px rgba(19, 20, 19, 0.039);
+  transition: 0.4s;
+}
+
+.profile-img:hover {
+  scale: 0.97;
+  box-shadow: 0 0 30px rgba(20, 235, 255, 0.2);
 }
 
 .profile-img img {
@@ -122,6 +128,22 @@ header {
   }
 }
 
+#about p {
+  font-weight: bold;
+  background-color: #f1f5f4;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 25px 50px 50px 25px;
+  transition: 0.4s;
+}
+
+#about p:hover {
+  scale: 1.02;
+  box-shadow: 0 3.5px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(90deg, #2e2c2c, #60eaca);
+  color: white;
+}
 .section {
   padding: 5rem 0;
   opacity: 0;
@@ -147,6 +169,7 @@ header {
   background: #ffffff;
   text-align: center;
   box-shadow: 0 3.5px 20px rgba(35, 34, 34, 0.1);
+  transition: 0.5;
 }
 
 #music h2 {
@@ -163,6 +186,18 @@ header {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
+}
+
+.music1,
+.music2 {
+  transition: 0.5s;
+}
+
+.music1:hover,
+.music2:hover {
+  scale: 1.05;
+  padding: 2px;
+  border-radius: 10px;
 }
 
 .section h2 {
@@ -397,7 +432,7 @@ header {
 
 .Gmail {
   text-align: center;
-  margin: 20px auto;
+  margin: 15px auto;
 }
 
 .gmail-link {
@@ -405,7 +440,7 @@ header {
   align-items: center;
   text-decoration: none;
   background: linear-gradient(45deg, #fd7600, #e10707, #e2ff03);
-  padding: 6px 15px;
+  padding: 4.5px 10px;
   border-radius: 30px;
   color: white;
   transition: transform 0.3s ease;
