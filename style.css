@@ -82,6 +82,15 @@ header {
   animation: slideUp 1s ease-out;
 }
 
+.profile-img img {
+  transition: 0.3s ease-in-out;
+}
+
+.profile-img:hover img {
+  content: url("pp2.png"); 
+}
+
+
 .profile-img {
   width: 300px;
   height: 300px;
@@ -91,7 +100,8 @@ header {
   position: relative;
   animation: float 4s ease-in-out infinite;
   box-shadow: 0 0 30px rgba(19, 20, 19, 0.039);
-  transition: 0.4s;
+  transition: 0.3s ease-in-out;
+  background-color: rgb(241, 238, 238); 
 }
 
 .profile-img:hover {
@@ -103,7 +113,30 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: 2; /* Layer2 */
 }
+
+.profile-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgb(1, 22, 65) 30%, rgba(4, 64, 175, 0.97));
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1; /* Layer1 */
+  border-radius: 50%; 
+}
+
+.profile-img:hover::after {
+  opacity: 1; 
+}
+
+
+
 
 .typewriter {
   font-size: 50px;
@@ -494,4 +527,3 @@ iframe {
   background: linear-gradient(45deg, #25D366, #128C7E, #075E54); 
 }
 */
-
